@@ -133,4 +133,4 @@ STATIC_ROOT = root('static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = root('media')
 
-WAGTAIL_SITE_NAME = 'Pycon'
+WAGTAIL_SITE_NAME = 'PyCon'
