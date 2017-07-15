@@ -22,6 +22,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'wagtailblocks',
+
     'wagtail.wagtailforms',
     'wagtail.wagtailredirects',
     'wagtail.wagtailembeds',
@@ -59,7 +61,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            root('frontend'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -68,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'pycon.context_processors.site_config',
             ],
         },
     },
@@ -134,3 +136,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = root('media')
 
 WAGTAIL_SITE_NAME = 'PyCon'
+
+GOOGLE_MAPS_KEY = env('GOOGLE_MAPS_KEY')

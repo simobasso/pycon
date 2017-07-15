@@ -1,0 +1,6 @@
+{% extends "wagtailadmin/admin_base.html" %}
+
+{% block js %}
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_KEY }}"></script>
+    {{ block.super }}
+{% endblock %}
